@@ -1,0 +1,10 @@
+build/
+*.sqlite3
+*.md
+*.json
+node_modules/
+*.git
+.gitignore
+.dockerignore
+Dockerfile
+README.md

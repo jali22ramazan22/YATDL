@@ -1,0 +1,13 @@
+
+body, button, input{
+    font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+
+  user-select: none;
+}
+
+*{
+    color: rgb(255, 230, 0);
+}
+
