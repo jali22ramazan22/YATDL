@@ -87,7 +87,7 @@ git clone https://github.com/jali22ramazan22/YATDL.git
 
 Install al dependendies 
 ```c
-cd frontend npm install && cd ../ && wails build 
+cd frontend && npm install --force && cd ../ && wails build 
 ```
 
 ```c
