@@ -10,7 +10,7 @@ This project is a to do list containing the folllowing techonogies:
 - Docker (Experimental | Untested) #main-technolgy 
 ---
 
-![[UI.png]]
+![UI.png](UI.png)
 
 ## Common
 ---
