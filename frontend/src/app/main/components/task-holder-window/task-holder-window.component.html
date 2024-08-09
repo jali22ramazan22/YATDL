@@ -1,0 +1,52 @@
+
+
+@if(DoneTasksSwitch){
+  @if(DoneTasksSlice.length <= 0 ){
+    <p>No Task is finished So Far</p>
+  }
+  @for(task of DoneTasksSlice; track task){
+
+    <div class="task"
+    style="text-decoration: line-through; text-decoration-color: green;">
+      <div class="checkbox">
+          <input type="checkbox" checked (click)="onUndoFinishTask(task)">
+      </div>
+      <div  style="color: green">
+          Title: {{task._title}}
+      </div>
+
+      <div (click)="onIncrementDate(task)" style="color: green">
+          Finished At: {{task._whenFinished | date }}
+      </div>
+      <div >
+          <button class="delete-button" (click)="onDelete(task, 'done')">Delete</button>
+      </div>
+  </div>
+  }
+
+} @else {
+  @if(MainTasksSlice.length <= 0 ){
+    <p >No Task Is Added So Far</p>
+  }
+  @for(task of MainTasksSlice; track task){
+    <div class="task">
+        <div class="checkbox"  (click)="onFinishTask(task)">
+            <input type="checkbox">
+        </div>
+        <div>
+            Title: {{task._title}}
+        </div>
+
+        <div (click)="onIncrementDate(task)">
+            Due To: {{task._dueTo | date }}
+        </div>
+
+        <div [appPriorityColor]="task._priority" (click)="onChangePriority(task)">
+            Priority: {{task._priority}}
+        </div>
+        <div >
+            <button class="delete-button" (click)="onDelete(task, 'main')">Delete</button>
+        </div>
+    </div>
+  }
+}

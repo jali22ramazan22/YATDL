@@ -1,0 +1,25 @@
+<div class="main-class">
+
+    <div class="header">
+        <p class="header-title">To Do List App</p>
+    </div>
+    <div class="input-task">
+        <input class="input-field" [formControl]="inputForm.controls.title">
+        <button class="submit-task-field"
+        (click)="onCreateTask()"
+        [disabled]="inputForm.invalid">Create Task</button>
+    </div>
+    <div class="body">
+        <div class="toolchain">
+            <div (click)="onSwitchTasksList()" [ngStyle]="{'color': DoneTasksSwitch ? 'green' : 'yellow'}">
+              {{DoneTasksSwitch ? "Done Tasks" : "Unfinished Tasks"}}
+            </div>
+            <div (click)="onSortByPriority()">Sort by Priority</div>
+            <div (click)="onSortByDate()">Sort by Date</div>
+
+        </div>
+        <div class="tasks-list">
+          <app-task-holder-window [DoneTasksSwitch]="DoneTasksSwitch"></app-task-holder-window>
+     </div>
+  </div>
+</div>

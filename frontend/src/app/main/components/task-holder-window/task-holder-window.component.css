@@ -1,0 +1,83 @@
+.input-field:focus{
+  background-color: #242628;
+  border: none;
+  outline: none;
+}
+
+.submit-task-field, .delete-button{
+  background-color: #1b1d1f;
+  position: relative;
+  border: none;
+  font-size: 1.5vh;
+  transition: 0.2s;
+}
+
+.submit-task-field{
+  height: 60%;
+  top: 2vh;
+  width: 90%;
+}
+
+.submit-task-field:active, .delete-button:active{
+  scale: calc(0.95);
+}
+.submit-task-field:hover, .delete-button:hover{
+  transition: 0.2s;
+  background-color: #242628;
+}
+
+.tasks-list{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  padding: 1vh;
+  overflow-y: auto;
+  height: 50vh;
+  gap: 1vh;
+  align-content: center;
+}
+
+.body{
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  width: 50%;
+  transform: translate(50%);
+  background-color: #202123;
+  height: 90%;
+  opacity: 0.8;
+
+}
+.task {
+  padding: 2vh;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5vh;
+  gap: 2vh;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #18191b;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.checkbox input{
+  width: 3vh;
+}
+
+.toolchain{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items:  center;
+  font-size: 2vh;
+  padding: 1vh;
+}
+
+.delete-button{
+  padding: 1vh;
+  background-color: rgb(89, 0, 0);
+}
+.delete-button:hover{
+  background-color: rgb(166, 0, 0);
+}
