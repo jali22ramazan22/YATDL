@@ -51,7 +51,7 @@ export class Task implements AbstractTask {
     }
 
     undoFinishTask(): void{
-        this._whenFinished = "";
+        this._whenFinished = undefined;
     }
 
     changePriority(): void{

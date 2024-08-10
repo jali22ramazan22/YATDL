@@ -122,16 +122,18 @@ export class GeneralService{
         const taskToUpdate = this.findAndGetTask(task, this._MainTasks.value);
         if (taskToUpdate) {
             taskToUpdate.changePriority();
+            this.API.updateTask(task);
         }
-        this.API.updateTask(task);
+
     }
 
     incrementDueDate(task: Task): void {
         const taskToUpdate = this.findAndGetTask(task, this._MainTasks.value);
         if (taskToUpdate) {
             taskToUpdate.incrementDate();
+            this.API.updateTask(task);
         }
-        this.API.updateTask(task);
+
     }
 
     sortTasksByDate(): void {

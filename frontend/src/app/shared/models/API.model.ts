@@ -1,4 +1,4 @@
-import { Priority, Task, TaskCreator } from "./Task.model";
+import { Priority, Task } from "./Task.model";
 
 export interface BaseSerializer {
   serialize(cls: any): string;

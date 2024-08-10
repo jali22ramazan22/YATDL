@@ -27,7 +27,9 @@ go.work.sum
 
 # env file
 .env
-
+frontend/.vscode/
+frontend/.angular/
+frontent/node_modules/
 ## Angular ##
 # compiled output
 dist/

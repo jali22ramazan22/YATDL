@@ -33,6 +33,9 @@ export class APIService{
     }
 
     updateTask(task: Task): void{
+      if(!task){
+        return
+      }
       UpdateTask(this.serializer.serialize(task));
     }
 
