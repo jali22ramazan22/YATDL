@@ -89,10 +89,11 @@ Install al dependendies
 ```c
 cd frontend && npm install --force && cd ../ && wails build 
 ```
-
+If on Linux:
 ```c
 cd build/bin && ./"To Do List"
 ```
+
 
 Alternatively, you can use Docker to build and run the application in Linux (experimental) WITHOUT wails and golang:
 ```c
