@@ -20,7 +20,7 @@ func NewApp() *App {
 	return &App{}
 }
 
-// enchansing connection pooling when app is starting
+// enchanting connection pooling when app is starting
 func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
 	var err error

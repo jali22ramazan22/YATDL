@@ -7,7 +7,7 @@ This project is a to do list containing the folllowing techonogies:
 - GORM #additional-library 
 - .sqllite3 #database
 - Wails.io #framework
-- Docker (Experimental | Untested) #main-technolgy 
+- Docker (Build applications without wails and go and copy only executable file from container) #main-technology
 ---
 
 ![UI.png](UI.png)
@@ -107,11 +107,12 @@ sudo apt-get update && sudo apt-get install -y --no-install-recommends \
 
 ```c
 docker build -t todolist -f dockerfile-linux .
-docker exec -it todoist /bin/bash
-
+docker run  -it --entrypoint /bin/bash todolist
 ```
 In alternate terminal process
+*You should find image labeled as todolist and alias tagged by docker itself: <container-name>*
 ```c
+docker ps
 docker cp <container-name>:/app/build/bin output-bin/
 ```
 

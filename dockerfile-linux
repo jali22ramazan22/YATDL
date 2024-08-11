@@ -24,7 +24,7 @@ COPY --from=base /app /app/
 
 WORKDIR /app/build/bin
 
-ENTRYPOINT ./To_Do_List
+
 
 
 
