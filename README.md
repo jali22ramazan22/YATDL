@@ -94,7 +94,7 @@ cd frontend && npm install --force && cd ../ && wails build
 cd build/bin && ./"To Do List"
 ```
 
-Alternatively, you can use Docker to build and run the application in Linux (experimental):
+Alternatively, you can use Docker to build and run the application in Linux (experimental) WITHOUT wails and golang:
 ```c
 sudo apt-get update && sudo apt-get install -y --no-install-recommends \
                                    libwebkit2gtk-4.0-37 \
