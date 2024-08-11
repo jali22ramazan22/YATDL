@@ -1,0 +1,30 @@
+FROM ghcr.io/abjrcode/cross-wails:v2.8.2 AS base
+WORKDIR /app
+
+COPY . /app/
+
+WORKDIR /app/frontend
+
+RUN npm install --force \
+    && npm install --legacy-peer-deps
+
+
+WORKDIR ../
+
+RUN wails build
+
+FROM debian:bullseye-slim AS final
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libgtk-3-0 \
+        libwebkit2gtk-4.0-37 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=base /app /app/
+
+WORKDIR /app/build/bin
+
+ENTRYPOINT ./To_Do_List
+
+
+

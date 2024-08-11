@@ -94,10 +94,25 @@ cd frontend && npm install --force && cd ../ && wails build
 cd build/bin && ./"To Do List"
 ```
 
-Alternatively, you can use Docker to build and run the application (experimental):
+Alternatively, you can use Docker to build and run the application in Linux (experimental):
 ```c
-docker build -t to-do-list-app .
-docker run --rm -it to-do-list-app
+sudo apt-get update && sudo apt-get install -y --no-install-recommends \
+                                   libwebkit2gtk-4.0-37 \
+                                   libwebkit2gtk-4.0-dev \
+                                   && apt-get clean \
+                                   && rm -rf /var/lib/apt/lists/*
+```
+
+
+
+```c
+docker build -t todolist -f dockerfile-linux .
+docker exec -it todoist /bin/bash
+
+```
+In alternate terminal process
+```c
+docker cp <container-name>:/app/build/bin output-bin/
 ```
 
 
